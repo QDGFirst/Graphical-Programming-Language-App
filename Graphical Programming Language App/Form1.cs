@@ -21,7 +21,7 @@ namespace Graphical_Programming_Language_App
 
         Pen myPen = new Pen(System.Drawing.Color.Black);
         int x = 0, y = 0, radius = 0, width = 0, height = 0, counter = 0;
-        int loop = 0, kStart = 0;
+        int loop = 0, kStart = 0, ifcounter = 0;
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -204,7 +204,126 @@ namespace Graphical_Programming_Language_App
                 {
                     if(commands[1].Equals ("counter") && commands[2].Equals("=") && commands[4].Equals("then"))
                     {
+                        Int32.TryParse(commands[3], out ifcounter);
+                        if(ifcounter == (loop + 1))
+                        {
+                            if (commands[5].Equals("radius"))
+                            {
+                                if (commands[6].Equals("="))
+                                {
+                                    Int32.TryParse(commands[7], out radius);
+                                    Console.WriteLine(radius);
+                                }
+                                else
+                                if (commands[6].Equals("+"))
+                                {
+                                    int r;
+                                    Int32.TryParse(commands[7], out r);
+                                    radius = radius + r;
+                                    Console.WriteLine(radius);
+                                }
+                                else
+                                if (commands[6].Equals("-"))
+                                {
+                                    int r;
+                                    Int32.TryParse(commands[7], out r);
+                                    radius = radius - r;
+                                }
 
+                            }
+                            else
+                    if (commands[5].Equals("width"))
+                            {
+                                if (commands[6].Equals("="))
+                                {
+                                    Int32.TryParse(commands[7], out width);
+                                    Console.WriteLine(width);
+                                }
+                                else
+                                if (commands[6].Equals("+"))
+                                {
+                                    int w;
+                                    Int32.TryParse(commands[7], out w);
+                                    width = width + w;
+                                }
+                                else
+                                if (commands[6].Equals("-"))
+                                {
+                                    int w;
+                                    Int32.TryParse(commands[7], out w);
+                                    width = width - w;
+                                }
+                            }
+                            else
+                    if (commands[5].Equals("height"))
+                            {
+                                if (commands[6].Equals("="))
+                                {
+                                    Int32.TryParse(commands[7], out height);
+                                    Console.WriteLine(height);
+                                }
+                                else
+                                if (commands[6].Equals("+"))
+                                {
+                                    int h;
+                                    Int32.TryParse(commands[7], out h);
+                                    height = height + h;
+                                }
+                                else
+                                if (commands[6].Equals("-"))
+                                {
+                                    int h;
+                                    Int32.TryParse(commands[7], out h);
+                                    height = height - h;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                else
+                if (commands[0].Equals("endif"))
+                {
+                    if (commands[1].Equals("radius"))
+                    {
+                        if (commands[2].Equals("="))
+                        {
+                            int endifvar;
+                            Int32.TryParse(commands[3], out endifvar);
+                            if(radius == endifvar)
+                            {
+                                break;
+                            }
+                        }
+
+                    }
+                    else
+                    if (commands[1].Equals("width"))
+                    {
+                        if (commands[2].Equals("="))
+                        {
+                            int endifvar;
+                            Int32.TryParse(commands[3], out endifvar);
+                            if(width == endifvar)
+                            {
+                                break;
+                            }
+                        }
+                        
+                    }
+                    else
+                    if (commands[1].Equals("height"))
+                    {
+                        if (commands[2].Equals("="))
+                        {
+                            int endifvar;
+                            Int32.TryParse(commands[3], out endifvar);
+                            if (height == endifvar)
+                            {
+                                break;
+                            }
+                        }
+                        
                     }
 
                 }
@@ -226,6 +345,13 @@ namespace Graphical_Programming_Language_App
                         k = kStart;
                     }
 
+                }
+                else
+                    if(!commands[0].Equals(null))
+                {
+                    int errorLine = k + 1;
+                    MessageBox.Show("Command not recognised on line " + errorLine, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
