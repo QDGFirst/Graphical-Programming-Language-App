@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +9,20 @@ namespace Graphical_Programming_Language_App
 {
     interface IDraw
     {
-        void moveTo();
+        int getX();
 
-        void drawLine();
+        int getY();
 
-        void drawRectangle();
+        void moveTo( int x, int y);
 
-        void drawCircle();
+        void drawLine(int x, int y);
 
-        void drawTriangle();
+        void drawRectangle(int width, int height);
 
-        void drawPolygon();
+        void drawCircle(int radius);
+
+        void drawTriangle(int b, int height);
+
+        void drawPolygon(Point[] p);
     }
 }

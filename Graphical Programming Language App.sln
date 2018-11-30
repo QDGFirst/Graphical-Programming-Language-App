@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphical Programming Language App", "Graphical Programming Language App\Graphical Programming Language App.csproj", "{4D8C7064-4283-4974-AA72-4808B6B7E9DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphical Programming Language AppTests", "Graphical Programming Language AppTests\Graphical Programming Language AppTests.csproj", "{2F6C28F6-38CB-4D86-BF8E-8E9A0D0B9BAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4D8C7064-4283-4974-AA72-4808B6B7E9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8C7064-4283-4974-AA72-4808B6B7E9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8C7064-4283-4974-AA72-4808B6B7E9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6C28F6-38CB-4D86-BF8E-8E9A0D0B9BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6C28F6-38CB-4D86-BF8E-8E9A0D0B9BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6C28F6-38CB-4D86-BF8E-8E9A0D0B9BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6C28F6-38CB-4D86-BF8E-8E9A0D0B9BAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
