@@ -202,7 +202,7 @@ namespace Graphical_Programming_Language_App
                 else
                     if (commands[0].Equals("if"))
                 {
-                    if(commands[1].Equals ("="))
+                    if(commands[1].Equals ("counter") && commands[2].Equals("=") && commands[4].Equals("then"))
                     {
 
                     }
